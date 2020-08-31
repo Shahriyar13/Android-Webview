@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <TextView
+        android:id="@+id/textViewHighRiskError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorRed"
+        android:padding="6dp"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:drawableEndCompat="@drawable/ic_close"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewLowRiskError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorOrange"
+        android:visibility="gone"
+        android:padding="6dp"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        app:drawableEndCompat="@drawable/ic_close"
+        app:layout_constraintTop_toBottomOf="@id/textViewHighRiskError" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewLowRiskError" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
